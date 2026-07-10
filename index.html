@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Floaty Piet — 3D Printed Shower Shelf</title>
-<meta name="description" content="A custom-designed, 3D printed shower shelf and organizer. Designed and printed by me.">
+<title>Floaty Piet — 3D-gedruckte Duschablage</title>
+<meta name="description" content="Eine selbst entworfene, 3D-gedruckte Duschablage. Designt und gedruckt von Piet.">
 <style>
   :root{
     --bg:#0b0d10;
@@ -72,20 +72,6 @@
     text-align:center;
   }
   .hero img{width:100%;height:100%;object-fit:cover;display:block;}
-  .hero .placeholder{
-    display:flex;flex-direction:column;align-items:center;gap:12px;
-    color:var(--muted);padding:20px;
-  }
-  .hero .placeholder svg{width:52px;height:52px;opacity:.7;}
-  .hero .placeholder small{font-size:.82rem;letter-spacing:.02em;}
-  .hero .grid-lines{
-    position:absolute;inset:0;
-    background-image:
-      linear-gradient(rgba(61,220,151,.06) 1px,transparent 1px),
-      linear-gradient(90deg,rgba(61,220,151,.06) 1px,transparent 1px);
-    background-size:26px 26px;
-    pointer-events:none;
-  }
   .tagline{
     font-size:1.15rem;
     font-weight:600;
@@ -102,7 +88,17 @@
     font-size:1rem;
   }
   .story p+p{margin-top:12px;}
-  .cta{
+  .story .greet{
+    color:var(--accent);
+    font-weight:700;
+    font-size:1.05rem;
+  }
+  .links{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .btn{
     display:flex;
     align-items:center;
     justify-content:center;
@@ -110,17 +106,23 @@
     width:100%;
     padding:16px 20px;
     border-radius:14px;
-    background:var(--yt);
     color:#fff;
     text-decoration:none;
     font-weight:700;
     font-size:1.05rem;
     border:none;
-    box-shadow:0 8px 22px rgba(255,0,51,.28);
     transition:transform .12s ease, box-shadow .12s ease;
   }
-  .cta:active{transform:scale(.98);}
-  .cta svg{width:26px;height:26px;flex:none;}
+  .btn:active{transform:scale(.98);}
+  .btn svg{width:26px;height:26px;flex:none;}
+  .btn-yt{
+    background:var(--yt);
+    box-shadow:0 8px 22px rgba(255,0,51,.28);
+  }
+  .btn-ig{
+    background:linear-gradient(135deg,#feda75,#fa7e1e 30%,#d62976 60%,#962fbf 85%,#4f5bd5);
+    box-shadow:0 8px 22px rgba(214,41,118,.28);
+  }
   footer{
     text-align:center;
     color:var(--muted);
@@ -146,34 +148,36 @@
       <h1>Floaty <span>Piet</span></h1>
     </header>
 
-    <section class="hero" aria-label="Product image">
-      <div class="grid-lines"></div>
-      <!-- Replace this placeholder with: <img src="shelf.jpg" alt="3D printed shower shelf"> -->
-      <div class="placeholder">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="3" y="3" width="18" height="18" rx="2"/>
-          <circle cx="8.5" cy="8.5" r="1.5"/>
-          <path d="M21 15l-5-5L5 21"/>
-        </svg>
-        <small>Shower shelf photo goes here</small>
-      </div>
+    <section class="hero" aria-label="Produktbild">
+      <img src="shelf.png" alt="3D-gedruckte Duschablage von Floaty Piet">
     </section>
 
-    <p class="tagline">Designed and 3D printed <span class="accent">by me</span></p>
+    <p class="tagline">Designt und 3D-gedruckt <span class="accent">von mir</span></p>
 
     <div class="story">
-      <p>I got hooked on designing 3D prints that solve small, everyday annoyances — starting with a shower shelf that finally fit my space and held up to the steam.</p>
-      <p>What began as a one-off print for my own bathroom turned into a little side project: functional, made-to-last organizers I design, print, and share. This tag is on one of mine.</p>
+      <p class="greet">Moin moin,</p>
+      <p>ich bin Piet und hatte schon immer Spaß daran, Dinge zu optimieren und Probleme zu lösen. Manchmal hilft mir dabei mein 3D-Drucker, mit dem ich kleine, alltägliche Problemlöser designe.</p>
+      <p>Da ich hier täglich mit dem Fahrrad herkomme und danach dusche, so wie wahrscheinlich auch du, habe ich mich jeden Morgen gefragt, wo ich eigentlich meine Shampoo-Flasche hinstellen soll. Also habe ich kurzerhand eine Duschablage designt, die perfekt zu dieser Dusche passt. Damit landet das Shampoo nicht mehr auf dem Boden, sondern in einer Höhe, bei der man sich nicht bücken muss.</p>
     </div>
 
-    <a class="cta" href="https://www.youtube.com/@floatypiet" target="_blank" rel="noopener noreferrer">
-      <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
-        <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/>
-      </svg>
-      Watch on YouTube
-    </a>
+    <div class="links">
+      <a class="btn btn-yt" href="https://www.youtube.com/@floatypiet" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true">
+          <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.6 15.6V8.4l6.2 3.6z"/>
+        </svg>
+        Auf YouTube ansehen
+      </a>
+      <a class="btn btn-ig" href="https://www.instagram.com/floatypiet" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
+        Auf Instagram folgen
+      </a>
+    </div>
 
-    <footer>&copy; Floaty Piet · Made with a 3D printer</footer>
+    <footer>&copy; Floaty Piet · Mit einem 3D-Drucker gemacht</footer>
   </div>
 </body>
 </html>
